@@ -22,7 +22,7 @@ resource "aws_s3_bucket" "terraform_state" {
 resource "aws_security_group" "test_sg" {
   name        = "cjhood_testsg"
   description = "Allow TLS inbound traffic"
-  vpc_id      = vpc-0742f34632726d631
+  vpc_id      = "${var.vpc_id}"
 
   ingress {
     description      = "TLS from VPC"
