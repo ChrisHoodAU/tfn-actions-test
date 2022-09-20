@@ -32,6 +32,14 @@ resource "aws_security_group" "test_sg" {
     cidr_blocks = ["172.31.0.0/16"]
   }
 
+  ingress {
+    description = "Extra TLS from VPC"
+    from_port   = 8443
+    to_port     = 8443
+    protocol    = "tcp"
+    cidr_blocks = ["172.31.0.0/16"]
+  }
+
   egress {
     from_port   = 0
     to_port     = 0
