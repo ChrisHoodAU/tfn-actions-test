@@ -41,7 +41,7 @@ jobs:
         aws-region: ap-southeast-2
 
     - name: Terraform Init
-      run: terraform init -input=false
+      run: terraform init
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         TF_ACTION_WORKING_DIR: '.'
